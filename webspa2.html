@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serene Haven Spa</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f5f0;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    width:100%;
+    padding:20px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#556b2f;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#8aa05a;
+}
+
+.btn{
+    padding:10px 22px;
+    border:none;
+    background:#8aa05a;
+    color:white;
+    border-radius:25px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#6f8445;
+}
+
+/* BOOKING */
+.booking{
+    min-height:100vh;
+    background:#f7f6f2;
+    padding:140px 80px 80px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.booking-container{
+    width:100%;
+    max-width:1200px;
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* LEFT IMAGE */
+.booking-image{
+    position:relative;
+    height:100%;
+}
+
+.booking-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.image-text{
+    position:absolute;
+    bottom:40px;
+    left:40px;
+    color:white;
+    background:rgba(0,0,0,0.4);
+    padding:20px;
+    border-radius:15px;
+    backdrop-filter:blur(4px);
+}
+
+.image-text h2{
+    margin-bottom:10px;
+    font-size:32px;
+}
+
+/* FORM */
+.booking-form{
+    padding:50px;
+}
+
+.booking-form h2{
+    font-size:40px;
+    color:#556b2f;
+    margin-bottom:10px;
+}
+
+.booking-form p{
+    color:#666;
+    margin-bottom:30px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.input-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.input-box{
+    display:flex;
+    flex-direction:column;
+}
+
+.input-box label{
+    margin-bottom:8px;
+    font-weight:600;
+    color:#444;
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea{
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    outline:none;
+    font-size:15px;
+    background:#fafafa;
+    transition:0.3s;
+}
+
+.input-box input:focus,
+.input-box select:focus,
+.input-box textarea:focus{
+    border-color:#8aa05a;
+    background:white;
+}
+
+textarea{
+    resize:none;
+}
+
+.book-btn{
+    margin-top:10px;
+    padding:16px;
+    border:none;
+    background:#8aa05a;
+    color:white;
+    font-size:16px;
+    border-radius:14px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.book-btn:hover{
+    background:#6f8445;
+}
+
+/* FOOTER */
+footer{
+    background:#556b2f;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* RESPONSIVE */
+@media(max-width:950px){
+
+    .booking-container{
+        grid-template-columns:1fr;
+    }
+
+    .booking-image{
+        height:350px;
+    }
+
+    .input-row{
+        grid-template-columns:1fr;
+    }
+
+    .booking{
+        padding:120px 20px 50px;
+    }
+
+    .booking-form{
+        padding:30px;
+    }
+
+    header{
+        padding:20px;
+    }
+
+    nav ul{
+        gap:15px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <div class="logo">FUJI SPA CENTER</div>
+
+    <nav>
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li><a href="#">Đặt lịch</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <button class="btn">Đăng nhập</button>
+
+</header>
+
+<!-- BOOKING -->
+<section class="booking">
+
+    <div class="booking-container">
+
+        <!-- LEFT -->
+        <div class="booking-image">
+
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="image-text">
+                <h2>Luxury Relaxation</h2>
+
+                <p>
+                    Trải nghiệm không gian spa cao cấp giúp thư giãn cơ thể và tinh thần.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="booking-form">
+
+            <h2>Đặt lịch hẹn</h2>
+
+            <p>
+                Vui lòng điền thông tin để đặt lịch tại Fuji Spa Center
+            </p>
+
+            <form>
+
+                <div class="input-box">
+                    <label>Họ và tên</label>
+                    <input type="text" placeholder="Nhập họ tên">
+                </div>
+
+                <div class="input-row">
+
+                    <div class="input-box">
+                        <label>Số điện thoại</label>
+                        <input type="text" placeholder="0123456789">
+                    </div>
+
+                    <div class="input-box">
+                        <label>Email</label>
+                        <input type="email" placeholder="example@gmail.com">
+                    </div>
+
+                </div>
+
+                <div class="input-row">
+
+                    <div class="input-box">
+                        <label>Dịch vụ</label>
+
+                        <select>
+                            <option>Massage Body</option>
+                            <option>Chăm sóc da</option>
+                            <option>Tinh dầu thư giãn</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Ngày hẹn</label>
+                        <input type="date">
+                    </div>
+
+                </div>
+
+                <div class="input-row">
+
+                    <div class="input-box">
+                        <label>Giờ hẹn</label>
+
+                        <select>
+                            <option>09:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>02:00 PM</option>
+                            <option>05:00 PM</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Số lượng khách</label>
+
+                        <select>
+                            <option>1 Người</option>
+                            <option>2 Người</option>
+                            <option>3 Người</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Ghi chú</label>
+
+                    <textarea rows="4" placeholder="Yêu cầu thêm..."></textarea>
+
+                </div>
+
+                <button class="book-btn">
+                    ĐẶT LỊCH NGAY
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Fuji Spa Center | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
