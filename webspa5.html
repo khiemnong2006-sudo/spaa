@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - FUJI SPA CENTER</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#f5f5f0;
+            color:#333;
+        }
+
+        /* HEADER GIỮ NGUYÊN */
+        header{
+            width:100%;
+            padding:20px 80px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background:white;
+            position:fixed;
+            top:0;
+            z-index:1000;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+            color:#556b2f;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:30px;
+        }
+
+        nav ul li a{
+            text-decoration:none;
+            color:#444;
+            font-weight:500;
+            transition:0.3s;
+        }
+
+        nav ul li a:hover{
+            color:#8aa05a;
+        }
+
+        .btn{
+            padding:10px 22px;
+            border:none;
+            background:#8aa05a;
+            color:white;
+            border-radius:25px;
+            cursor:pointer;
+            transition:0.3s;
+            text-decoration:none;
+        }
+
+        .btn:hover{
+            background:#6f8445;
+        }
+
+        /* LOGIN PAGE */
+        .login-section{
+            width:100%;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding-top:120px;
+            background:
+                linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1400&auto=format&fit=crop');
+            background-size:cover;
+            background-position:center;
+        }
+
+        .login-box{
+            width:420px;
+            background:white;
+            padding:40px;
+            border-radius:25px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .login-box h2{
+            text-align:center;
+            color:#556b2f;
+            margin-bottom:10px;
+            font-size:36px;
+        }
+
+        .login-box p{
+            text-align:center;
+            margin-bottom:30px;
+            color:#777;
+        }
+
+        .input-box{
+            margin-bottom:20px;
+        }
+
+        .input-box label{
+            display:block;
+            margin-bottom:8px;
+            font-weight:bold;
+            color:#444;
+        }
+
+        .input-box input{
+            width:100%;
+            padding:14px;
+            border:1px solid #ccc;
+            border-radius:12px;
+            outline:none;
+            transition:0.3s;
+            font-size:15px;
+        }
+
+        .input-box input:focus{
+            border-color:#8aa05a;
+            box-shadow:0 0 8px rgba(138,160,90,0.3);
+        }
+
+        .remember{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:25px;
+            font-size:14px;
+        }
+
+        .remember a{
+            text-decoration:none;
+            color:#556b2f;
+        }
+
+        .login-btn{
+            width:100%;
+            padding:14px;
+            border:none;
+            border-radius:30px;
+            background:#8aa05a;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .login-btn:hover{
+            background:#6f8445;
+        }
+
+        .register{
+            text-align:center;
+            margin-top:20px;
+        }
+
+        .register a{
+            color:#556b2f;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:900px){
+
+            header{
+                padding:20px;
+            }
+
+            nav ul{
+                gap:15px;
+            }
+
+            .login-box{
+                width:90%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">FUJI SPA CENTER</div>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" target="_blank" class="btn">
+                        Trang chủ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="webspa2.html" target="_blank" class="btn">
+                        Đặt lịch
+                    </a>
+                </li>
+
+                <li>
+                    <a href="webspa3.html" target="_blank" class="btn">
+                        Thanh toán
+                    </a>
+                </li>
+
+                <li>
+                    <a href="webspa4.html" target="_blank" class="btn">
+                        Lịch sử
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <button class="btn"><a href="webspa5.html" target="_blank" class="btn">
+            Đăng nhập
+        </a></button>
+    </header>
+
+    <!-- LOGIN -->
+    <section class="login-section">
+
+        <div class="login-box">
+
+            <h2>Đăng nhập</h2>
+
+            <p>Chào mừng quay trở lại Fuji Spa Center</p>
+
+            <form>
+
+                <div class="input-box">
+                    <label>Email</label>
+                    <input type="email" placeholder="Nhập email của bạn">
+                </div>
+
+                <div class="input-box">
+                    <label>Mật khẩu</label>
+                    <input type="password" placeholder="Nhập mật khẩu">
+                </div>
+
+                <div class="remember">
+                    <label>
+                        <input type="checkbox">
+                        Ghi nhớ tài khoản
+                    </label>
+
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Đăng nhập
+                </button>
+
+            </form>
+
+            <div class="register">
+                Chưa có tài khoản?
+                <a href="#">Đăng ký ngay</a>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
